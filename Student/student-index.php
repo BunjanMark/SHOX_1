@@ -44,30 +44,38 @@
 									
 								</div>
 								<div class="collapse show mt-2" id="collapseOne">
-									<table class="w-100 table-elements table-two-tr"cellpadding="2">
+									<table class="w-100 table-elements table-two-tr" cellpadding="2">
 										<tr class="pt-5 table-two text-white" style="height: 32px;">
 											<th>Subject Code</th>
 											<th>Subject Name</th>
 											<th>Semester</th>
 											<th>Credit Hours</th>
 										</tr>
-										<?php $roll_no=$_SESSION['LoginStudent'];
-											$max_semester = "select max(semester) as semester from student_courses where roll_no = '$roll_no'";
-											$max_run = mysqli_query($con, $max_semester);
-											$row = mysqli_fetch_array($max_run);
-											$semester = $row['semester'];
-											$query="select sc.subject_code,cs.subject_name,sc.semester,cs.credit_hours, sc.roll_no, sc.semester from student_courses sc inner join course_subjects cs on sc.subject_code=cs.subject_code where sc.roll_no='$roll_no' and sc.semester = $semester";
-											$run=mysqli_query($con,$query);
-											while ($row=mysqli_fetch_array($run)) { ?>								
-										<tr>
-											<td><?php echo $row['subject_code'] ?></td>
-											<td><?php echo $row['subject_name'] ?></td>
-											<td><?php echo $row['semester'] ?></td>
-											<td><?php echo $row['credit_hours'] ?></td>
-										</tr>
-										<?php } ?>
+										<?php
+										$roll_no = $_SESSION['LoginStudent'];
+										$max_semester = "SELECT MAX(semester) AS semester FROM student_courses WHERE roll_no = '$roll_no'";
+										$max_run = mysqli_query($con, $max_semester);
+										$row = mysqli_fetch_array($max_run);
+										$semester = $row['semester'];
+										$query = "SELECT sc.subject_code, cs.subject_name, sc.semester, cs.credit_hours
+												FROM student_courses sc
+												INNER JOIN course_subjects cs ON sc.subject_code = cs.subject_code
+												WHERE sc.roll_no = '$roll_no' AND sc.semester = '$semester'";
+										$run = mysqli_query($con, $query);
+										while ($row = mysqli_fetch_array($run)) {
+											?>
+											<tr>
+												<td><?php echo $row['subject_code']; ?></td>
+												<td><?php echo $row['subject_name']; ?></td>
+												<td><?php echo $row['semester']; ?></td>
+												<td><?php echo $row['credit_hours']; ?></td>
+											</tr>
+											<?php
+										}
+										?>
 									</table>
 								</div>
+
 							</section>
 						</div>
 					</div>
