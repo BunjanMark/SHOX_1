@@ -77,33 +77,34 @@ if (isset($_POST['sub'])) {
 									<th>Add Attendance</th>
 								</tr>
 								<?php  
-								$i=1;
-									$conn=mysqli_connect("localhost","root","","college");
+										$i = 1;
+										$conn = mysqli_connect("localhost", "root", "", "college");
 
-									if (isset($_POST['submit'])) {
-										$teacher_id=$_POST['teacher_id'];
+										if (isset($_POST['submit'])) {
+											$teacher_id = $_POST['teacher_id'];
 
-										$que="select teacher_id,first_name,middle_name,last_name from teacher_info where teacher_id='$teacher_id' ";
-									$run=mysqli_query($con,$que);
-									while ($row=mysqli_fetch_array($run)) {
+											$que = "SELECT teacher_id, first_name, middle_name, last_name FROM teacher_info WHERE teacher_id = '$teacher_id'";
+											$run = mysqli_query($conn, $que);
+
+											while ($row = mysqli_fetch_array($run)) {
 									?>
-										<form action="teacher-attendance.php" method="post">
-										<tr>
-											<td><?php echo $i++ ?></td>
-											<td><?php echo $row['teacher_id'] ?></td>
-											<input type="hidden" name="teacher_id" value=<?php echo $row['teacher_id'] ?> >
-											<td><?php echo $row["first_name"]." ".$row["middle_name"]." ".$row["last_name"] ?></td>
-											<td><?php echo 1 ?></td>
-											<td><?php echo 1 ?></td>
-											<td class="text-center"><?php echo "1/1" ?></td>
-											<td><?php echo "50% of 100%" ?></td>
-											<td>Present<input type="checkbox" name="attendance" value="1">Absent<input type="checkbox" name="attendance" value="0" ></td>
-										</tr>
-										
-								<?php		
-									}
-									}
-								?>
+											<form action="teacher-attendance.php" method="post">
+												<tr>
+													<td><?php echo $i++ ?></td>
+													<td><?php echo $row['teacher_id'] ?></td>
+													<input type="hidden" name="teacher_id" value="<?php echo $row['teacher_id'] ?>">
+													<td><?php echo $row["first_name"]." ".$row["middle_name"]." ".$row["last_name"] ?></td>
+													<td><?php echo 1 ?></td>
+													<td><?php echo 1 ?></td>
+													<td class="text-center"><?php echo "1/1" ?></td>
+													<td><?php echo "50% of 100%" ?></td>
+													<td>Present<input type="checkbox" name="attendance" value="1">Absent<input type="checkbox" name="attendance" value="0"></td>
+												</tr>
+											</form>
+									<?php
+											}
+										}
+									?>
 								<input type="submit" name="sub">
 
 								</form>
