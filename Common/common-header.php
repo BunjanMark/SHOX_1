@@ -8,7 +8,7 @@
 
       <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/footer.css">
-      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="stylesheet" type="text/css" href="../Css/style.css">
 
     <!-- css style go to end here -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="../index.php">HOME<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../homepage.php">HOME<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="../academics.php">ACADEMICS<span class="sr-only">(current)</span></a>
@@ -41,3 +41,4 @@
         </ul>
       </div>
     </nav>
+    </body>
