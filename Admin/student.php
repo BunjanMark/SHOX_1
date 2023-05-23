@@ -239,7 +239,7 @@
 								  		<div class="row">
 											<div class="col-md-4">
 											    <div class="form-group">
-											        <label for="exampleInputEmail1">Prospectus Issude: </label>
+											        <label for="exampleInputEmail1">Prospectus Issued: </label>
 											        <select class="browser-default custom-select" name="prospectus_issued">
 													  <option>Select Option</option>
 													  <option value="Yes">Yes</option>
