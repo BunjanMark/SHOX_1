@@ -373,7 +373,7 @@
 								<div class="col-md-12 ml-2">
 									<div class="row">
 									<div class="col-md-6">
-										<form action="search_student.php" method="post">
+										<form action="teacher.php" method="post">
 											<div class="form-group">
 												<label for="exampleInputPassword1"><h5>Search:</h5></label>
 												<div class="d-flex">
@@ -383,6 +383,7 @@
 											</div>
 										</form>
 									</div>	
+									<div class="col-md-12 pt-5 mb-2">
 									<!-- Large modal -->
 									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg1">Assign Subjects</button>
 									<div class="modal fade bd-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
