@@ -117,7 +117,11 @@ if (isset($_POST['sub'])) {
 								<?php  
 								$i=1;
 								$count=0;
+<<<<<<< HEAD
 									$conn=mysqli_connect("localhost","root","","imperial_college");
+=======
+									$conn=mysqli_connect("localhost","root","","college");
+>>>>>>> 36db58e31d95da170987bd487ee58121dcc496cc
 
 									if (isset($_POST['submit'])) {
 										$course_code=$_POST['course_code'];

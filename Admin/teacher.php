@@ -370,7 +370,23 @@
 					<div class="col-md-12 ml-2">
 						<section class="mt-3">
 							<div class="row">
+<<<<<<< HEAD
 								<div class="col-md-3 offset-9 pt-5 mb-2">
+=======
+								<div class="col-md-12 ml-2">
+									<div class="row">
+									<div class="col-md-6">
+										<form action="search_student.php" method="post">
+											<div class="form-group">
+												<label for="exampleInputPassword1"><h5>Search:</h5></label>
+												<div class="d-flex">
+													<input type="text" name="search" id="search" class="form form-control" placeholder="Enter I'd">
+													<input class="btn btn-primary px-4 ml-4" type="submit" name="btnSearch" value="Search">
+												</div>
+											</div>
+										</form>
+									</div>	
+>>>>>>> 36db58e31d95da170987bd487ee58121dcc496cc
 									<!-- Large modal -->
 									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg1">Assign Subjects</button>
 									<div class="modal fade bd-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -480,4 +496,7 @@
 	</body>
 </html>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 36db58e31d95da170987bd487ee58121dcc496cc

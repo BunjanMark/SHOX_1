@@ -4,7 +4,11 @@
 	<title>Home-CHMSC</title>
 	<link rel="shortcut icon" href="./Images/icbs_logo.png" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+=======
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+>>>>>>> 36db58e31d95da170987bd487ee58121dcc496cc
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
